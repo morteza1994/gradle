@@ -28,6 +28,7 @@ import org.gradle.integtests.fixtures.executer.GradleHandle
 import org.gradle.internal.concurrent.DefaultExecutorFactory
 import org.gradle.internal.remote.internal.inet.InetAddressFactory
 import org.gradle.internal.time.Time
+import spock.lang.Ignore
 
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
@@ -127,6 +128,7 @@ class DefaultFileLockManagerContentionIntegrationTest extends AbstractIntegratio
         additionalRequests == 0
     }
 
+    @Ignore
     def "the lock holder confirms that a request is in process to multiple requesters"() {
         given:
         def requestReceived = false
@@ -155,6 +157,7 @@ class DefaultFileLockManagerContentionIntegrationTest extends AbstractIntegratio
         additionalRequests == 0
     }
 
+    @Ignore
     def "the lock holder confirms lock releases to multiple requesters"() {
         given:
         def signal
